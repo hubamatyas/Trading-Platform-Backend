@@ -13,3 +13,20 @@ The second layer (i.e., values in company_transactions), where the algorithms su
 
 ### List - Layer 3
 The third and final layer (i.e., values in TransactionTree) is a simple list of transactions. A list is required instead of storing single transactions as it is possible to have multiple transactions with the same trade value for a particular company. In other words, keys in TransactionTree may not be unique, however, this anomaly can be supported by the use of lists as values in the tree. It can not only be supported but is an essential part of the API that ensures every transaction is returned when two or more transactions with the same trade value for the same company are recorded. To implement the ideas of encapsulation and information hiding, each transaction is stored as a Transaction object. The objects store the information (name, price, quantity, date) in instance variables and are accessible via getter functions.
+
+# Framework Testing on Colab
+```
+Execution time to load 1000000 transactions: 29.1113
+
+Mean execution time sorted_transactions: 0.057768446
+
+Mean execution time min_transactions: 0.0
+
+Mean execution time max_transactions: 0.0
+
+Mean execution time floor_transactions: 0.0
+
+Mean execution time ceiling_transactions: 0.0
+
+Mean execution time range_transactions: 0.036049755
+```
