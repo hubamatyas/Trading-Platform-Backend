@@ -1,4 +1,4 @@
 # Trading-Platform-Backend
- Backend blueprint for logging and querying millions of transactions.
+ Backend framework for logging and querying millions of transactions.
  
  TODO
