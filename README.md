@@ -3,7 +3,7 @@ Backend framework for logging and querying millions of transactions.
 
 To store information contained in a transaction and to efficiently implement the TradingBackend API a combination of non-linear and linear data structures and algorithms were used. The final application, as shown below, consists of three data structure layers to logically distribute the millions of transactions every day.
 
-![alt text](https://github.com/hubamatyas/Trading-Platform-Backend/blob/main/chart.png)
+![Data structures chart](https://github.com/hubamatyas/Trading-Platform-Backend/blob/main/chart.png)
  
 ### Hash Table - Layer 1
 Drawing from the divide and conquer technique, a Hash Table (company_transactions), where keys are company names and values are binary search trees, is used first to separate transactions based on the twelve companies. Although a Hash Table does not guarantee it, built-in Python, and other extensively tested hash functions and collision management techniques provide constant look-up and insertion time in most cases. Ο(1) insertion also makes the application easily extendable by simply adding a new company-tree pair to the Hash Table. Additionally, because neither guaranteed constant look-up time nor ordered operations on company names are required on the stock trading platform, a Hash Table was seen as the most appropriate data structure for the first layer.
